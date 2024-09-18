@@ -31,7 +31,7 @@ function myArray() {
 //loops? Hoe werken ze en zijn ze hetzelfde?
 function whileLoop() {
   const nameArray = ["Damiën", "Lucas", "Mischa"];
-  let i = 0; //je index variabel kan elke naam hebben die je maar wilt. Het is namelijk een variabel
+  let i = 0; //je begin variabel kan elke naam hebben die je maar wilt. Het is namelijk een variabel
   //wel is het handig om hier normaal een i of index aan te geven
   while (i < nameArray.length) {
     console.log(nameArray[i]);
@@ -73,14 +73,14 @@ function ifElseStatement() {
   //if(condition){run code if condition is true}
   if (x == 2) {
     //== kijkt niet naar het datatype
-    console.log(x + " is 2");
+    console.log("== "+ x + " is 2");
   }
   if (x === "2") {
     //=== kijkt of het datatype ook gelijk is
     console.log(x + " is '2'");
-  } else {
+  } else { //run this code when if is false
     console.log(
-      "het is geen '2' want x is van het datatype " + typeof(x) + "en niet " + typeof("2")
+      "=== het is geen '2' want x is van het datatype " + typeof(x) + "en niet " + typeof("2")
     );
   }
 }
