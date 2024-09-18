@@ -53,6 +53,14 @@ function whileLoop() {
 function forLoop() {
   const nameArray = ["Damiën", "Lucas", "Mischa"];
   for (let index = 0; index < nameArray.length; index++) {
+    // Deze syntax ziet er in het begin misschien wat moeilijk uit, maar het principe is erg simpel.
+    // Een for loop is opgesplitst in 3 operaties, die je tussen de haakjes zet.
+    // In dit geval "let index = 0" maakt een nieuwe variabele aan specifiek voor deze loop. Een gebruikelijke naam is "i".
+    // Deze variabele vergelijk je dan met een waarde om te kijken of het antwoord hiervan waar is. 
+    // In dit geval: index < (is kleiner dan) de lengte van de array. 
+    // Zo lang als dit waar is, zal de derde operatie ook plaats vinden. Dit is altijd "i++". Hiermee hou je ook meteen bij
+    // hoe veel loops er zijn geweest.
+    
     console.log(index + " " + nameArray[index]);
   }
 }
