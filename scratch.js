@@ -113,5 +113,5 @@ function changeTextColor() {
    * style pakt de style (crazy i know)
    * hierna specificeren we met backgroundColor welk css 'onderdeel' we aan willen passen
    */
-  //   document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
+    // document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
 }
