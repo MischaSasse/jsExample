@@ -43,7 +43,7 @@ function whileLoop() {
 
 // Floris: while loops worden vaak gebruikt voor als iets constant moet draaien,
 // For loops voor als je door een array of iets dergelijks moet "iteraten" = door data structure heen lopen en informatie krijgen
-// Ook als je een website maakt waar performance belangrijk is, dan is de loop die je gebruikt vna belang.
+// Ook als je een website maakt waar performance belangrijk is, is de loop die je gebruikt van belang.
 // Bijvoorbeeld; for loops zijn ~3x sneller dan een .forEach() method op een array.
 // Hou wel in je achterhoofd dat een .forEach() method veel leesbaarder is qua code, dus gebruik het als het een kleine array is
 // of een aspect van de website dat niet vaak wordt gebruikt.
