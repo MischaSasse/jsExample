@@ -2,7 +2,7 @@
 function myFunctionName() {
   console.log("hello :D");
 }
-myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
+// myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
 
 //hoe werken variabelen?
 function myVariable() {
@@ -54,12 +54,12 @@ function forLoop() {
   for (let index = 0; index < nameArray.length; index++) {
     // fhNote:
     // Deze syntax ziet er in het begin misschien wat moeilijk uit, maar het principe is erg simpel.
-    // Een for loop is opgesplitst in 3 operaties, die je tussen de haakjes zet.
+    // Een for loop is opgesplitst in 3 operaties, die je scheidt door middel van ';'.
     // In dit geval "let index = 0" maakt een nieuwe variabele aan specifiek voor deze loop. Een gebruikelijke naam is "i".
     // Deze variabele vergelijk je dan met een waarde om te kijken of het antwoord hiervan "true" is.
     // In dit geval: index < (is kleiner dan) de lengte van de array.
-    // Zo lang als dit waar is, zal de derde operatie ook plaats vinden. Dit is altijd "i++". Hiermee hou je ook meteen bij
-    // hoe veel loops er zijn geweest.
+    // Zo lang als dit waar is, zal de derde operatie ook plaats vinden NADAT de code een keer gerund heeft. 
+    // Dit is altijd "i++". Hiermee hou je ook meteen bij hoeveel loops er zijn geweest.
 
     console.log(index + " " + nameArray[index]);
   }
@@ -81,9 +81,7 @@ function ifElseStatement() {
     //run this code when if is false
     console.log(
       "=== het is geen '2' want x is van het datatype " +
-        typeof x +
-        "en niet " +
-        typeof "2"
+        typeof (x) + "en niet " + typeof ("2")
     );
   }
 }
@@ -113,28 +111,6 @@ function myObject() {
 }
 // myObject()
 
-// HOE WORDT DIT TOEGEPAST?? Read below :>
-
-function changeTextColor() {
-  let currentTextColor = document.body.style.color;
-  const colorMap = {
-    "": "red", //"" is de default, Standaard heeft body geen tekstkleur. undefined/"" heeft als kleur zwart
-    red: "blue",
-    blue: "yellow",
-    yellow: "red",
-  };
-  document.body.style.color = colorMap[currentTextColor];
-  //^ set de textcolor van je body naar de value van je property
-
-  /*
-   * document is het hele DOM object, zie het als al je html
-   * getElementsByTagName('tagName') maakt een array van alle elementen met de aangegeven tagname
-   * [0] pakt de eerste index van je array, je gebruikt over het algemeen maar 1 header dus deze hoort bij index 0
-   * style pakt de style (crazy i know)
-   * hierna specificeren we met backgroundColor welk css 'onderdeel' we aan willen passen
-   */
-  // document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
-}
 
 //Wat is een return?
 function returnFunction() {
@@ -157,3 +133,28 @@ function sum(param1, param2) {
   return param1 + param2
 }
 // console.log(sum(4,6))  //wanneer je een functie aanroept en deze waardes meegeeft, dan heten dit argumenten
+
+
+// HOE WORDT DIT TOEGEPAST?? Read below :>
+
+function changeTextColor() {
+  let currentTextColor = document.body.style.color;
+  const colorMap = {
+    "": "red", //"" is de default, Standaard heeft body geen tekstkleur. undefined/"" heeft als kleur zwart
+    red: "blue",
+    blue: "yellow",
+    yellow: "red",
+  };
+  document.body.style.color = colorMap[currentTextColor];
+  //^ set de textcolor van je body naar de value van je property
+
+  /*
+   * document is het hele DOM object, zie het als al je html
+   * getElementsByTagName('tagName') maakt een array van alle elementen met de aangegeven tagname
+   * [0] pakt de eerste index van je array, je gebruikt over het algemeen maar 1 header dus deze hoort bij index 0
+   * style pakt de style (crazy i know)
+   * hierna specificeren we met backgroundColor welk css 'onderdeel' we aan willen passen
+   */
+  // document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
+}
+// changeTextColor()
