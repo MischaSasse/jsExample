@@ -2,7 +2,7 @@
 function myFunctionName() {
   console.log("hello :D");
 }
-myFunctionName(); //Dit is een call naar de functie, Dit betekent dat de functie uitgevoerd zal worden.
+myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
 
 //hoe werken variabelen?
 function myVariable() {
@@ -39,7 +39,7 @@ function whileLoop() {
     i++;
   }
 }
-// whileLoop()
+// whileLoop();
 
 // fhNote: while loops worden vaak gebruikt voor als iets constant moet draaien,
 // For loops voor als je door een array of iets dergelijks moet "iteraten" = door data structure heen lopen en informatie krijgen
@@ -48,39 +48,42 @@ function whileLoop() {
 // Hou wel in je achterhoofd dat een .forEach() method veel leesbaarder is qua code, dus gebruik het als het een kleine array is
 // of een aspect van de website dat niet vaak wordt gebruikt.
 
-
 //for loop, wat is het verschil?
 function forLoop() {
   const nameArray = ["Damiën", "Lucas", "Mischa"];
   for (let index = 0; index < nameArray.length; index++) {
-    // fhNote: 
+    // fhNote:
     // Deze syntax ziet er in het begin misschien wat moeilijk uit, maar het principe is erg simpel.
     // Een for loop is opgesplitst in 3 operaties, die je tussen de haakjes zet.
     // In dit geval "let index = 0" maakt een nieuwe variabele aan specifiek voor deze loop. Een gebruikelijke naam is "i".
-    // Deze variabele vergelijk je dan met een waarde om te kijken of het antwoord hiervan "true" is. 
-    // In dit geval: index < (is kleiner dan) de lengte van de array. 
+    // Deze variabele vergelijk je dan met een waarde om te kijken of het antwoord hiervan "true" is.
+    // In dit geval: index < (is kleiner dan) de lengte van de array.
     // Zo lang als dit waar is, zal de derde operatie ook plaats vinden. Dit is altijd "i++". Hiermee hou je ook meteen bij
     // hoe veel loops er zijn geweest.
-    
+
     console.log(index + " " + nameArray[index]);
   }
 }
 // forLoop()
 
-//wat is een if statement? wat is een else statement? 
+//wat is een if statement? wat is een else statement?
 function ifElseStatement() {
   let x = 2;
   //if(condition){run code if condition is true}
   if (x == 2) {
     //== kijkt niet naar het datatype
-    console.log("== "+ x + " is 2");
+    console.log("== " + x + " is 2");
   }
   if (x === "2") {
     //=== kijkt of het datatype ook gelijk is
     console.log(x + " is '2'");
-  } else { //run this code when if is false
+  } else {
+    //run this code when if is false
     console.log(
-      "=== het is geen '2' want x is van het datatype " + typeof(x) + "en niet " + typeof("2")
+      "=== het is geen '2' want x is van het datatype " +
+        typeof x +
+        "en niet " +
+        typeof "2"
     );
   }
 }
@@ -130,5 +133,5 @@ function changeTextColor() {
    * style pakt de style (crazy i know)
    * hierna specificeren we met backgroundColor welk css 'onderdeel' we aan willen passen
    */
-    // document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
+  // document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
 }
