@@ -135,3 +135,25 @@ function changeTextColor() {
    */
   // document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
 }
+
+//Wat is een return?
+function returnFunction() {
+  for (let i = 0; i < 5; i++) {
+    if (i == 3) {
+      return i;
+    }
+  }
+}
+
+//functie in een andere functie aanroepen
+function functionCallInAFunction() {
+  let x = returnFunction();
+  console.log(x);
+}
+// functionCallInAFunction()
+
+//argumenten (args) en parameters (params)
+function sum(param1, param2) {
+  return param1 + param2
+}
+// console.log(sum(4,6))  //wanneer je een functie aanroept en deze waardes meegeeft, dan heten dit argumenten
