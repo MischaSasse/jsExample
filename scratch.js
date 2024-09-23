@@ -25,14 +25,6 @@ function myVariable() {
 }
 // myVariable();
 
-//array? wat is dat??
-function myArray() {
-  const nameArray = ["Damiën", "Lucas", "Mischa"];
-  console.log(nameArray);
-}
-// myArray()
-
-
 //wat is een if statement? wat is een else statement?
 function ifElseStatement() {
   let x = 2;
@@ -52,6 +44,29 @@ function ifElseStatement() {
   }
 }
 // ifElseStatement();
+
+
+/* EXERCISE:
+* gebruik een if statement en 2 variabelen om het volgende te printen in je console:  2 + 3 = 5
+* In je console.log mag je geen getallen gebruiken.
+*/
+
+
+//array? wat is dat??
+function myArray() {
+  const nameArray = ["Damiën", "Lucas", "Mischa"];
+  console.log(nameArray);
+}
+// myArray()
+
+
+/* EXERCISE:
+* Maak een array met namen van mensen om je heen. 
+* Laat de 2e naam van je array in je console zien 
+*/
+
+
+
 
 //loops? Hoe werken ze en zijn ze hetzelfde?
 function whileLoop() {
@@ -93,16 +108,38 @@ function forLoop() {
 }
 // forLoop()
 
+/* EXERCISE
+* Gebruik een for loop om het volgende in je console te printen:
+*    *
+*    *
+*    *
+*    *
+*    *
+*    (5x een '*' onder elkaar) pro tip: Je browser console kan dit als *5 laten zien
+*/
+
+
 //wat is het verschil met een loop?         msNote: loops geven meer controle en flexibiliteit
 function myForEach() {
   const nameArray = ["Damiën", "Lucas", "Mischa"];
-  nameArray.forEach((name) => {
+  nameArray.forEach(name => {
     console.log(name);
   });
 }
 // myForEach();
 
 
+//EXERCISE:
+/*
+* Maak een array genaamd fruitschaal en stop hier fruit in. (minimaal 4 unieke fruitsoorten) 
+* Laat door middel van een foreach al het fruit in je console zien
+*/
+
+
+//EXERCISE 2:
+/* 
+* Laat nu elk stuk fruit zien in je console door middel van een loop
+*/
 
 
 //objecten???  (mocht je dit stuk niet helemaal begrijpen, dan is dat nog niet erg, dit is meer gevorderd dan het vorige)
@@ -113,12 +150,22 @@ function myObject() {
     lastName: "van den IJssel",
     age: 23,
   };
-  console.log(obj.firstName);
   // let myName = obj[firstName]   Dit geeft een error
   let myName = obj["firstName"]; // Zie je het verschil met de lijn erboven?
   console.log("name is " + myName);
 }
 // myObject()
+
+
+/*EXERCISE
+* Maak een object genaamd auto. Dit object moet de volgende properties hebben:
+* Merk, Kleur, Stoelverwarming, Aantal wielen
+* Laat eerst in je console je hele auto zien. 
+* Laat hierna alleen de kleur zien
+*/
+
+
+
 
 //Wat is een return?
 function returnFunction() {
@@ -127,6 +174,7 @@ function returnFunction() {
       return i;
     }
   }
+  return 1
 }
 //Wat is het verschil tussen return en break?
 
@@ -143,6 +191,7 @@ function sum(param1, param2) {
 }
 // console.log(sum(4,6))  //wanneer je een functie aanroept en deze waardes meegeeft, dan heten dit argumenten
 
+
 // HOE WORDT DIT TOEGEPAST?? Read below :>
 
 function changeTextColor() {
@@ -156,13 +205,30 @@ function changeTextColor() {
   document.body.style.color = colorMap[currentTextColor];
   //^ set de textcolor van je body naar de value van je property
 
-  /*
+  /* msNote:
    * document is het hele DOM object, zie het als al je html
    * getElementsByTagName('tagName') maakt een array van alle elementen met de aangegeven tagname
    * [0] pakt de eerste index van je array, je gebruikt over het algemeen maar 1 header dus deze hoort bij index 0
    * style pakt de style (crazy i know)
    * hierna specificeren we met backgroundColor welk css 'onderdeel' we aan willen passen
    */
+
   document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
 }
 // changeTextColor()
+
+
+function objectLiteral(){
+
+  function User(first,last,email,pass){
+    this.firstName=first,
+    this.lastName=last,
+    this.email=email,
+    this.password=pass
+  }
+  
+  let person = new User("mischa","sasse","random@email.com","randomPassword")
+  let person2 = new User("damien","bigboi","random@email2.com","randomPassword2")
+  console.log(person,"\n",person2);
+}
+// objectLiteral()
