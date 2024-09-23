@@ -11,6 +11,10 @@ function myVariable() {
   console.log(x);
   x = 5; //nu geven we ons variabel een waarde
   console.log(x);
+  //Wat ook kan is gelijk een waarde geven wanneer je een variabel definieert.
+  let z = "this is a string that has gotten a value when it was declared\n";
+  console.log(z);
+
   //--------------------------
   console.log("Variables using 'const'");
   const y = 3; //we definieeren y en geven deze een waarde
@@ -28,43 +32,6 @@ function myArray() {
 }
 // myArray()
 
-//loops? Hoe werken ze en zijn ze hetzelfde?
-function whileLoop() {
-  const nameArray = ["Damiën", "Lucas", "Mischa"];
-  let i = 0; //je begin variabel kan elke naam hebben die je maar wilt. Het is namelijk een variabel
-  //wel is het handig om hier normaal een i of index aan te geven
-  while (i < nameArray.length) {
-    console.log(nameArray[i]);
-    //after code
-    i++;
-  }
-}
-// whileLoop();
-
-// fhNote: while loops worden vaak gebruikt voor als iets constant moet draaien,
-// For loops voor als je door een array of iets dergelijks moet "iteraten" = door data structure heen lopen en informatie krijgen
-// Ook als je een website maakt waar performance belangrijk is, is de loop die je gebruikt van belang.
-// Bijvoorbeeld; for loops zijn ~3x sneller dan een .forEach() method op een array.
-// Hou wel in je achterhoofd dat een .forEach() method veel leesbaarder is qua code, dus gebruik het als het een kleine array is
-// of een aspect van de website dat niet vaak wordt gebruikt.
-
-//for loop, wat is het verschil?
-function forLoop() {
-  const nameArray = ["Damiën", "Lucas", "Mischa"];
-  for (let index = 0; index < nameArray.length; index++) {
-    // fhNote:
-    // Deze syntax ziet er in het begin misschien wat moeilijk uit, maar het principe is erg simpel.
-    // Een for loop is opgesplitst in 3 operaties, die je scheidt door middel van ';'.
-    // In dit geval "let index = 0" maakt een nieuwe variabele aan specifiek voor deze loop. Een gebruikelijke naam is "i".
-    // Deze variabele vergelijk je dan met een waarde om te kijken of het antwoord hiervan "true" is.
-    // In dit geval: index < (is kleiner dan) de lengte van de array.
-    // Zo lang als dit waar is, zal de derde operatie ook plaats vinden NADAT de code een keer gerund heeft. 
-    // Dit is altijd "i++". Hiermee hou je ook meteen bij hoeveel loops er zijn geweest.
-
-    console.log(index + " " + nameArray[index]);
-  }
-}
-// forLoop()
 
 //wat is een if statement? wat is een else statement?
 function ifElseStatement() {
@@ -80,12 +47,51 @@ function ifElseStatement() {
   } else {
     //run this code when if is false
     console.log(
-      "=== het is geen '2' want x is van het datatype " +
-        typeof (x) + "en niet " + typeof ("2")
+      "=== het is geen '2' want x is van het datatype " + typeof (x) + "en niet " + typeof ("2")
     );
   }
 }
 // ifElseStatement();
+
+//loops? Hoe werken ze en zijn ze hetzelfde?
+function whileLoop() {
+  const nameArray = ["Damiën", "Lucas", "Mischa"];
+  let i = 0; //je begin variabel kan elke naam hebben die je maar wilt. Het is namelijk een variabel
+             //wel is het handig om hier normaal een i of index aan te geven
+  while (i < nameArray.length) {
+    console.log(nameArray[i]);
+    //after code
+    i++;
+  }
+}
+// whileLoop();
+
+/* fhNote: while loops worden vaak gebruikt voor als iets constant moet draaien,
+* For loops voor als je door een array of iets dergelijks moet "iteraten" = door data structure heen lopen en informatie krijgen
+* Ook als je een website maakt waar performance belangrijk is, is de loop die je gebruikt van belang.
+* Bijvoorbeeld; for loops zijn ~3x sneller dan een .forEach() method op een array.
+* Hou wel in je achterhoofd dat een .forEach() method veel leesbaarder is qua code, dus gebruik het als het een kleine array is
+* of een aspect van de website dat niet vaak wordt gebruikt.
+*/
+
+//for loop, wat is het verschil?
+function forLoop() {
+  /* fhNote:
+  * Deze syntax ziet er in het begin misschien wat moeilijk uit, maar het principe is erg simpel.
+  * Een for loop is opgesplitst in 3 operaties, die je scheidt door middel van ';'.
+  * In dit geval "let index = 0" maakt een nieuwe variabele aan specifiek voor deze loop. Een gebruikelijke naam is "i".
+  * Deze variabele vergelijk je dan met een waarde om te kijken of het antwoord hiervan "true" is.
+  * In dit geval: index < (is kleiner dan) de lengte van de array.
+  * Zo lang als dit waar is, zal de derde operatie ook plaats vinden NADAT de code een keer gerund heeft.
+  * Dit is altijd "i++". Hiermee hou je ook meteen bij hoeveel loops er zijn geweest.
+  */
+
+  const nameArray = ["Damiën", "Lucas", "Mischa"];
+  for (let index = 0; index < nameArray.length; index++) {
+    console.log(index + " " + nameArray[index]);
+  }
+}
+// forLoop()
 
 //wat is het verschil met een loop?         msNote: loops geven meer controle en flexibiliteit
 function myForEach() {
@@ -95,6 +101,9 @@ function myForEach() {
   });
 }
 // myForEach();
+
+
+
 
 //objecten???  (mocht je dit stuk niet helemaal begrijpen, dan is dat nog niet erg, dit is meer gevorderd dan het vorige)
 //              (probeer wel mee te doen, maybe leer je het al wel)
@@ -111,7 +120,6 @@ function myObject() {
 }
 // myObject()
 
-
 //Wat is een return?
 function returnFunction() {
   for (let i = 0; i < 5; i++) {
@@ -120,6 +128,7 @@ function returnFunction() {
     }
   }
 }
+//Wat is het verschil tussen return en break?
 
 //functie in een andere functie aanroepen
 function functionCallInAFunction() {
@@ -130,10 +139,9 @@ function functionCallInAFunction() {
 
 //argumenten (args) en parameters (params)
 function sum(param1, param2) {
-  return param1 + param2
+  return param1 + param2;
 }
 // console.log(sum(4,6))  //wanneer je een functie aanroept en deze waardes meegeeft, dan heten dit argumenten
-
 
 // HOE WORDT DIT TOEGEPAST?? Read below :>
 
@@ -155,6 +163,6 @@ function changeTextColor() {
    * style pakt de style (crazy i know)
    * hierna specificeren we met backgroundColor welk css 'onderdeel' we aan willen passen
    */
-  // document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
+  document.getElementsByTagName("header")[0].style.backgroundColor = "purple";
 }
 // changeTextColor()
