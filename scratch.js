@@ -2,7 +2,7 @@
 function myFunctionName() {
   console.log("hello :D");
 }
-// myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
+myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
 
 //hoe werken variabelen?
 function myVariable() {
