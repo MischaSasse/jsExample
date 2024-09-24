@@ -2,7 +2,7 @@
 function myFunctionName() {
   console.log("hello :D");
 }
-myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
+// myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
 
 //hoe werken variabelen?
 function myVariable() {
@@ -81,7 +81,8 @@ function whileLoop() {
 }
 // whileLoop();
 
-/* fhNote: while loops worden vaak gebruikt voor als iets constant moet draaien,
+/* fhNote: 
+* while loops worden vaak gebruikt voor als iets constant moet draaien,
 * For loops voor als je door een array of iets dergelijks moet "iteraten" = door data structure heen lopen en informatie krijgen
 * Ook als je een website maakt waar performance belangrijk is, is de loop die je gebruikt van belang.
 * Bijvoorbeeld; for loops zijn ~3x sneller dan een .forEach() method op een array.
@@ -218,6 +219,7 @@ function changeTextColor() {
 // changeTextColor()
 
 
+//hoe worden objecten dan toegepast?
 function objectLiteral(){
 
   function User(first,last,email,pass){
