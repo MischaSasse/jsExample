@@ -2,7 +2,7 @@
 function myFunctionName() {
   console.log("hello :D");
 }
-// myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
+myFunctionName(); //Dit is een call naar de functie, Dit betekent dat alle code in de functie uitgevoerd zal worden.
 
 //hoe werken variabelen?
 function myVariable() {
@@ -54,8 +54,8 @@ function ifElseStatement() {
 
 //array? wat is dat??
 function myArray() {
-  const nameArray = ["Damiën", "Lucas", "Mischa"];
-  console.log(nameArray);
+  const names = ["Damiën", "Lucas", "Mischa"];
+  console.log(names);
 }
 // myArray()
 
@@ -70,11 +70,11 @@ function myArray() {
 
 //loops? Hoe werken ze en zijn ze hetzelfde?
 function whileLoop() {
-  const nameArray = ["Damiën", "Lucas", "Mischa"];
+  const names = ["Damiën", "Lucas", "Mischa"];
   let i = 0; //je begin variabel kan elke naam hebben die je maar wilt. Het is namelijk een variabel
              //wel is het handig om hier normaal een i of index aan te geven
-  while (i < nameArray.length) {
-    console.log(nameArray[i]);
+  while (i < names.length) {
+    console.log(names[i]);
     //after code
     i++;
   }
@@ -119,23 +119,20 @@ function forLoop() {
 *    (5x een '*' onder elkaar) pro tip: Je browser console kan dit als *5 laten zien
 */
 
-
 //wat is het verschil met een loop?         msNote: loops geven meer controle en flexibiliteit
 function myForEach() {
-  const nameArray = ["Damiën", "Lucas", "Mischa"];
-  nameArray.forEach(name => {
+  const names = ["Damiën", "Lucas", "Mischa"];
+  names.forEach(name => {
     console.log(name);
   });
 }
 // myForEach();
-
 
 //EXERCISE:
 /*
 * Maak een array genaamd fruitschaal en stop hier fruit in. (minimaal 4 unieke fruitsoorten) 
 * Laat door middel van een foreach al het fruit in je console zien
 */
-
 
 //EXERCISE 2:
 /* 
@@ -146,14 +143,14 @@ function myForEach() {
 //objecten???  (mocht je dit stuk niet helemaal begrijpen, dan is dat nog niet erg, dit is meer gevorderd dan het vorige)
 //              (probeer wel mee te doen, maybe leer je het al wel)
 function myObject() {
-  const obj = {
+  const person = {
     firstName: "Damiën",
     lastName: "van den IJssel",
     age: 23,
   };
   // let myName = obj[firstName]   Dit geeft een error
-  let myName = obj["firstName"]; // Zie je het verschil met de lijn erboven?
-  console.log("name is " + myName);
+  let name = person["firstName"]; // Zie je het verschil met de lijn erboven?
+  console.log("name is " + name);
 }
 // myObject()
 
@@ -181,13 +178,14 @@ function returnFunction() {
 
 //functie in een andere functie aanroepen
 function functionCallInAFunction() {
-  let x = returnFunction();
-  console.log(x);
+  let number = returnFunction();
+  console.log(number);
 }
 // functionCallInAFunction()
 
 //argumenten (args) en parameters (params)
 function sum(param1, param2) {
+  console.log(param1,"+",param2,"=");
   return param1 + param2;
 }
 // console.log(sum(4,6))  //wanneer je een functie aanroept en deze waardes meegeeft, dan heten dit argumenten
@@ -204,7 +202,7 @@ function changeTextColor() {
     yellow: "red",
   };
   document.body.style.color = colorMap[currentTextColor];
-  //^ set de textcolor van je body naar de value van je property
+  //^ set de textcolor van je body naar de waarde die correspondeert aan de ingegeven property
 
   /* msNote:
    * document is het hele DOM object, zie het als al je html
