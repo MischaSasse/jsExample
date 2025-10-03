@@ -232,3 +232,5 @@ function objectLiteral(){
   console.log(person,"\n",person2);
 }
 // objectLiteral()
+
+// random comment
